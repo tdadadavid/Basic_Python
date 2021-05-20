@@ -1,13 +1,26 @@
-temperature = 30
+# Practicing logical operaors
+# and , or , not
 
-if temperature > 50:
-    print("Really Hot!")
-    print("Have a cold bath")
+high_income = False
+good_credit = True
+student = False
+
+if high_income and good_credit:
+    print("Eligible")
 else:
-    print("The temperature is okay!")
+    print("Not Eligible")
 
-# Using the tenary oprator to write
-# the same logic we have
+# Output = not Eligble
 
-message = "Really hot " and "Have a cold bath" if temperature > 50 else "The temperature is okay!"
-print(message)
+
+if high_income or good_credit:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+# output  = Eligible
+
+if high_income or good_credit and not student:
+    print("Eligible")
+else:
+    print("Not Eligible")
