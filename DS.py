@@ -9,6 +9,10 @@ items = [
     ("product4", 90),
 ]
 
+prices = []
 
-items.sort(key=lambda items: items[1], reverse=True)
-print(items)
+for item in items:
+    prices.append(item[1])
+
+
+print(prices)
