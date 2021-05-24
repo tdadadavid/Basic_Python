@@ -1,20 +1,18 @@
 # Data structures in Python
 
-# Practicing sets
+# practicing Dictionaries
 
-universal = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-first = {1, 4, 6, 3}
-second = {2, 4, 8, 9, 5}
+points = {"x": 0, "y": 30, "z": 50}
+points["p"] = 33
+print(points)
+
+if "m" in points:
+    print(points["g"])
 
 
-# Union
-print(first | second)
+print(points.get("g"))
+del points["y"]
+print(points)
 
-# Intersection
-print(first & second)
-
-# Difference in a set
-print(first - second)
-
-# symetric Difference ina set
-print(first ^ second)
+for key, value in points.items():
+    print(key, value)
