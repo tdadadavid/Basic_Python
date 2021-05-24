@@ -10,9 +10,5 @@ items = [
 ]
 
 
-def sort_item(items):
-    return items[1]
-
-
-items.sort(key=sort_item, reverse=True)
+items.sort(key=lambda items: items[1], reverse=True)
 print(items)
