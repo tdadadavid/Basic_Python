@@ -1,25 +1,20 @@
 # Data structures in Python
 
-# filtering in python
+# Practicing sets
 
-products = [
-    ("product10", 2),
-    ("product11", 90),
-    ("product15", 267),
-    ("product12", 30)
-]
-
-# list comprehension is a super
-# cool way of mapping and filtering
-# list comprehension syntax = [expression for..in loop]
+universal = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+first = {1, 4, 6, 3}
+second = {2, 4, 8, 9, 5}
 
 
-# list comprehension for mapping
-prices = [product[1] for product in products]
-print(prices)
-# the code above is far better the the best way of mapping
+# Union
+print(first | second)
 
+# Intersection
+print(first & second)
 
-# list comprehension for filtering
-filtered = [product[1] for product in products if product[1] >= 10]
-print(filtered)
+# Difference in a set
+print(first - second)
+
+# symetric Difference ina set
+print(first ^ second)
