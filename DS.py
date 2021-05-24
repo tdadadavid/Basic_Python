@@ -1,26 +1,25 @@
 # Data structures in Python
 
-# sorting in python
+# filtering in python
 
-items = [
-    ("product1", 10),
-    ("product2", 0),
-    ("product3", 100),
-    ("product4", 90),
+products = [
+    ("product10", 2),
+    ("product11", 90),
+    ("product15", 267),
+    ("product12", 30)
 ]
 
-prices = []
+# list comprehension is a super
+# cool way of mapping and filtering
+# list comprehension syntax = [expression for..in loop]
 
 
-# A good way of mapping
-for item in items:
-    prices.append(item[1])
+# list comprehension for mapping
+prices = [product[1] for product in products]
+print(prices)
+# the code above is far better the the best way of mapping
 
-# A better way of mapping
-for val in check:
-    print(val)
 
-# kinda the best way
-check = list(map(lambda item: item[1], items))
-
-print(check)
+# list comprehension for filtering
+filtered = [product[1] for product in products if product[1] >= 10]
+print(filtered)
