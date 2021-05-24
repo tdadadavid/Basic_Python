@@ -1,33 +1,18 @@
 # Data structures in Python
 
+# sorting in python
 
-# matrix = [[0, 1], ["bola", "King"]]
-
-# for items in matrix:
-#     print(items[1])
-
-# numbers = list(range(20))
-# print(numbers[::-1])
-
-
-letters = ["a", "b", "c", "d", "e", "f"]
-
-# Add an element to a list
-# Using append fnc or the insert fnc
-
-# letters.append("D")
-# letters.insert(6, "y")
+items = [
+    ("product1", 10),
+    ("product2", 0),
+    ("product3", 100),
+    ("product4", 90),
+]
 
 
-# Remove element from a list
-# Using pop fnc || remove fnc
-# del keyword || clear fnc
+def sort_item(items):
+    return items[1]
 
 
-letters.pop()
-letters.remove("c")
-del letters[0:2]
-letters.clear()
-
-
-print(letters)
+items.sort(key=sort_item, reverse=True)
+print(items)
