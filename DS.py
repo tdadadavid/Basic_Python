@@ -11,8 +11,16 @@ items = [
 
 prices = []
 
+
+# A good way of mapping
 for item in items:
     prices.append(item[1])
 
+# A better way of mapping
+for val in check:
+    print(val)
 
-print(prices)
+# kinda the best way
+check = list(map(lambda item: item[1], items))
+
+print(check)
