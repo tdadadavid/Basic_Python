@@ -1,18 +1,9 @@
+from sys import getsizeof
+
 # Data structures in Python
 
 # practicing Dictionaries
-
-points = {"x": 0, "y": 30, "z": 50}
-points["p"] = 33
-print(points)
-
-if "m" in points:
-    print(points["g"])
-
-
-print(points.get("g"))
-del points["y"]
-print(points)
-
-for key, value in points.items():
-    print(key, value)
+first = {"x": 10, "y": 12}
+second = {"x": 20, "g": 23, "e": 11}
+combined = {**first, **second}
+print(combined)
