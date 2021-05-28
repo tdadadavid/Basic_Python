@@ -11,9 +11,6 @@ class Point:
         self.x = x
         self.y = y
 
-    def __str__(self):
-        return f"({self.x} , {self.y})"
-
     @classmethod
     def zero(cls):
         return cls(0, 0)
@@ -21,6 +18,16 @@ class Point:
     def draw(self):
         print(f"Drawning points ({self.x} , {self.y})")
 
+    def __str__(self):
+        return f"({self.x} , {self.y})"
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+
+    def __gt__(self, other):
+        return self.x > other.x and self.y > other.y
+
 
 point = Point(1, 2)
-print(str(point))
+point2 = Point(1, 2)
+print(point == point2)
