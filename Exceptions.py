@@ -1,14 +1,17 @@
+from timeit import timeit
 
-from typing import final
+
+code1 = """
+def calc_xfactor(age):
+    if age <= 0:
+        raise ValueError("Age must not be 0 or less")
+    retrun 10 / age
+
 
 
 try:
-    with open("app.py") as file:
-        print("App file opened")
-    age = int(input("Age : "))
-    xfactor = 10 / age
-    print(xfactor)
-except (ValueError, ZeroDivisionError) as exception:
-    print("Enter a valid age ")
-else:
-    print("Excution continues")
+    calc_xfactor(2)
+except ValueError as error:
+    print(error)
+"""
+print("Firstcode ", timeit(code1, number=1000))
