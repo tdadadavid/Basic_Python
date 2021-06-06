@@ -27,7 +27,10 @@ class Point:
     def __gt__(self, other):
         return self.x > other.x and self.y > other.y
 
+    def __add__(self, other):
+        return (self.x + other.x, self.y + other.y)
+
 
 point = Point(1, 2)
-point2 = Point(1, 2)
-print(point == point2)
+point2 = Point(1, -2)
+print(point + point2)
