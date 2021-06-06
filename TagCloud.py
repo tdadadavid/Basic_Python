@@ -1,28 +1,15 @@
-class TagCloud:
-    def __init__(self):
-        self.tags = {}
+class Product:
+    def __init__(self, price):
+        self.setPrice(price)
 
-    def add(self, tag):
-        self.tags[tag.lower()] = self.tags.get(tag.lower(), 0) + 1
+    def getPrice(self):
+        return self.__price
 
-    def __getItem__(self, tag):
-        return self.tags.get(tag.lower(), 0)
-
-    def __setItem__(self, tag, count):
-        self.tags[tag.lower()] = count
-
-    def __len__(self):
-        return len(self.tags)
-
-    def __iter__(self):
-        return iter(self.tags)
+    def setPrice(self, value):
+        if value < 0:
+            raise ValueError("Price cannot be negative")
+        self.__price = value
 
 
-tag = TagCloud()
-tag.add("JavaScript")
-tag.add("JavaScript")
-tag.add("JavaScript")
-tag.add("Python")
-tag.add("Java")
-len(tag)
-print(tag.tags)
+product1 = Product(-30)
+print(product1.price)
