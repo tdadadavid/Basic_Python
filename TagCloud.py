@@ -1,15 +1,20 @@
 class Product:
-    def __init__(self, price):
-        self.setPrice(price)
+    def __init__(self,  price):
+        self.__price = price
 
-    def getPrice(self):
+    @property
+    def price(self):
         return self.__price
 
-    def setPrice(self, value):
+    @price.setter
+    def price(self, value):
         if value < 0:
             raise ValueError("Price cannot be negative")
         self.__price = value
 
+    # price = property(setPrice, getPrice)
 
-product1 = Product(-30)
+
+product1 = Product(78)
+product1.price = 2
 print(product1.price)
