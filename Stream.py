@@ -38,9 +38,8 @@ class NetworkFile(Stream):
 
 
 class MemmoryStream(Stream):
-    pass
-    # def read(self):
-    #     print("Reading file from Memmory!")
+    def read(self):
+        print("Reading file from Memmory!")
 
 
 newStream = MemmoryStream()
